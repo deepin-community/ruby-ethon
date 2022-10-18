@@ -1,0 +1,38 @@
+Source: ruby-ethon
+Section: ruby
+Priority: optional
+Maintainer: Debian Ruby Team <pkg-ruby-extras-maintainers@lists.alioth.debian.org>
+Uploaders: Pirate Praveen <praveen@debian.org>
+Build-Depends: debhelper-compat (= 13),
+               gem2deb (>= 1),
+               libcurl4,
+               rake,
+               ruby-ffi (>= 1.15~),
+               ruby-json,
+               ruby-mime-types,
+               ruby-rack,
+               ruby-rspec,
+               ruby-sinatra,
+               ruby-webrick (>= 1.7~)
+Standards-Version: 4.6.0
+Vcs-Git: https://salsa.debian.org/ruby-team/ruby-ethon.git
+Vcs-Browser: https://salsa.debian.org/ruby-team/ruby-ethon
+Homepage: https://github.com/typhoeus/ethon
+Testsuite: autopkgtest-pkg-ruby
+XS-Ruby-Versions: all
+Rules-Requires-Root: no
+
+Package: ruby-ethon
+Architecture: all
+XB-Ruby-Versions: ${ruby:Versions}
+Depends: ${misc:Depends},
+         ${ruby:Depends},
+         ${shlibs:Depends},
+         libcurl4,
+         ruby-mime-types
+Description: libcurl wrapper using ffi
+ Very lightweight libcurl wrapper.
+ .
+ In Greek mythology, Ethon, the son of Typhoeus and Echidna, is a gigantic
+ eagle. So much for the history. In the modern world, Ethon is a very basic
+ libcurl wrapper using ffi

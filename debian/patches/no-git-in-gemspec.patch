@@ -1,0 +1,17 @@
+Description: Do not use git in gemspec
+Author: Cédric Boutillier <boutil@debian.org>
+Last-Update: 2021-11-22
+Forwarded: no
+
+--- a/ethon.gemspec
++++ b/ethon.gemspec
+@@ -20,7 +20,7 @@
+ 
+   s.add_dependency('ffi', ['>= 1.15.0'])
+ 
+-  s.files        = `git ls-files`.split("\n")
+-  s.test_files   = `git ls-files -- spec/*`.split("\n")
++  s.files        = Dir.glob("**/*").reject { |f| f =~ /^debian/ }
++  s.test_files   = Dir.glob("spec/**/*")
+   s.require_path = 'lib'
+ end

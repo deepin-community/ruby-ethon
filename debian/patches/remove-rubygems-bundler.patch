@@ -1,0 +1,19 @@
+Description: Bundler is not needed
+ We add dependencies in debian/control
+Author: Praveen Arimbrathodiyil <praveen@debian.org>
+Forwarded: No
+Last-Update: 2021-11-22
+
+--- a/spec/spec_helper.rb
++++ b/spec/spec_helper.rb
+@@ -2,8 +2,8 @@
+ $LOAD_PATH.unshift(File.dirname(__FILE__))
+ $LOAD_PATH.unshift(File.join(File.dirname(__FILE__), "..", "lib"))
+ 
+-require 'bundler'
+-Bundler.setup
++#require 'bundler'
++#Bundler.setup
+ require "ethon"
+ require 'rspec'
+ 

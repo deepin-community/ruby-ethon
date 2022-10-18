@@ -1,0 +1,2 @@
+remove-rubygems-bundler.patch
+no-git-in-gemspec.patch

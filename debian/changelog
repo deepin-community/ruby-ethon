@@ -1,0 +1,119 @@
+ruby-ethon (0.15.0-2) UNRELEASED; urgency=medium
+
+  * update
+
+ -- Debian Ruby Team <pkg-ruby-extras-maintainers@lists.alioth.debian.org>  Thu, 21 Jul 2022 16:43:41 +0800
+
+ruby-ethon (0.15.0-2) unstable; urgency=medium
+
+  * Team upload
+
+  [ Daniel Leidert ]
+  * d/control (Standards-Version): Bump to 4.6.0.
+  * d/copyright: Add Upstream-Contact field.
+    (Source): Update URL.
+    (Copyright): Update and add team.
+  * d/upstream/metadata: Update Changelog URL.
+
+ -- Cédric Boutillier <boutil@debian.org>  Mon, 29 Nov 2021 08:51:22 +0100
+
+ruby-ethon (0.15.0-1) unstable; urgency=medium
+
+  * Team upload
+
+  [ Utkarsh Gupta ]
+  * Add salsa-ci.yml
+
+  [ Debian Janitor ]
+  * Trim trailing whitespace.
+  * Use secure copyright file specification URI.
+  * Bump debhelper from old 11 to 12.
+  * Set debhelper-compat version in Build-Depends.
+  * Set upstream metadata fields: Bug-Database, Repository, Repository-
+    Browse.
+  * Update watch file format version to 4.
+  * Set upstream metadata fields: Bug-Submit.
+  * Remove constraints unnecessary since buster
+
+  [ Cédric Boutillier ]
+  * Update team name
+  * Add .gitattributes to keep unwanted files out of the source package
+  * New upstream version 0.15.0
+  * Update packaging files with dh-ruby-make -w
+    + add build-dependency on ruby-webrick (Closes: #996221)
+    + use gem install layout
+    + refresh patch
+    + add no-git-in-gemspec.patch to drop usage of git in gemspec file
+    + debhelper-compat level set to 13
+    + explicitly state that rules file does not require root
+    + drop explicit dependency on ruby interpreter
+    + Use ${ruby:Depends} to manage (some) dependencies through gemspec file
+
+ -- Cédric Boutillier <boutil@debian.org>  Mon, 22 Nov 2021 11:33:35 +0100
+
+ruby-ethon (0.9.0-2) unstable; urgency=medium
+
+  * Team upload.
+  * Bump dependency from libcurl3 to libcurl4 for the openssl1.1 transition.
+    Note that this changes the ABI with respect to SSL_CTX objects;
+    consumers of ruby-ethon must now switch to using OpenSSL 1.1 objects
+    instead of OpenSSL 1.0 if they use curl_easy_setopt(SSL_CTX_FUNCTION).
+    (Thanks to Steve Langasek for the note) (Closes: #900297)
+
+ -- Sruthi Chandran <srud@disroot.org>  Thu, 14 Jun 2018 18:18:47 +0530
+
+ruby-ethon (0.9.0-1) unstable; urgency=medium
+
+  * New upstream release
+
+ -- Pirate Praveen <praveen@debian.org>  Sat, 09 Jul 2016 20:34:58 +0530
+
+ruby-ethon (0.8.1-1) unstable; urgency=medium
+
+  * Team upload.
+  * New upstream release
+  * Add tests back on package build.
+    - Tests required rspec 3, but this version is now present in unstable
+
+ -- Lucas Albuquerque Medeiros de Moura <lucas.moura128@gmail.com>  Mon, 21 Mar 2016 11:52:25 -0300
+
+ruby-ethon (0.8.0-1) unstable; urgency=medium
+
+  * New upstream release
+
+ -- Pirate Praveen <praveen@debian.org>  Fri, 30 Oct 2015 02:36:07 +0530
+
+ruby-ethon (0.7.4-1) unstable; urgency=medium
+
+  * New upstream release
+
+ -- Pirate Praveen <praveen@debian.org>  Sat, 29 Aug 2015 23:48:38 +0530
+
+ruby-ethon (0.7.1-2) unstable; urgency=medium
+
+  * Re-upload to unstable.
+
+ -- Pirate Praveen <praveen@debian.org>  Tue, 28 Apr 2015 10:11:16 +0530
+
+ruby-ethon (0.7.1-1) experimental; urgency=medium
+
+  * New upstream release.
+  * Bump standards version to 3.9.6 (no changes).
+
+ -- Pirate Praveen <praveen@debian.org>  Fri, 21 Nov 2014 19:43:51 +0530
+
+ruby-ethon (0.7.0-1) unstable; urgency=low
+
+  * New upstream release.
+  * Bump standards version to 3.9.5 (no changes)
+  * Bump gem2deb build dep to >= 0.7.5 (ruby 2.x)
+  * Remove already applied patches.
+  * Tighten ruby-ffi build dep (for ruby 2.1)
+
+ -- Pirate Praveen <praveen@debian.org>  Sun, 13 Apr 2014 17:08:04 +0530
+
+ruby-ethon (0.5.12-1) unstable; urgency=low
+
+  * Initial release (Closes: #693256)
+
+ -- Praveen Arimbrathodiyil <praveen@debian.org>  Thu, 16 May 2013 12:54:02 +0530
